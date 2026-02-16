@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import {
   FileText,
@@ -304,13 +303,11 @@ export default function Home() {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="mt-14"
             >
-              <Image
-                src="/arch.png"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="arch.png"
                 alt="Medtrix architecture — unified knowledge base powering three intelligent layers"
-                width={1200}
-                height={700}
                 className="w-full rounded-[2rem] shadow-xl border border-black/5"
-                priority={false}
               />
             </motion.div>
           </div>
