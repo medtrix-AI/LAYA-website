@@ -160,7 +160,7 @@ export default function Home() {
                       <Users className="w-6 h-6 text-[var(--accent-lavender)]" />
                     </div>
                     <div className="text-right">
-                      <div className="text-xl font-bold text-foreground/80">50+</div>
+                      <div className="text-xl font-bold text-foreground/80">High Volume</div>
                       <div className="text-xs text-foreground/50">calls/day</div>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ export default function Home() {
                     Agent knowledge
                   </h3>
                   <p className="text-foreground/60 leading-relaxed text-sm">
-                    Support staff managing 50+ calls daily lack quick access to policy information, relying on physical consultation of documents.
+                    Support staff managing multiple calls daily lack quick access to policy information, relying on physical consultation of documents.
                   </p>
                 </div>
               </motion.div>

@@ -54,9 +54,9 @@ export const problems = [
     id: "knowledge",
     title: "Agent Knowledge Overload",
     description:
-      "Support staff managing 50+ calls daily lack quick access to policy information, relying on physical consultation of hundreds of policy documents.",
-    stat: "50+",
-    statLabel: "calls/day per agent",
+      "Support staff managing multiple calls daily lack quick access to policy information, relying on physical consultation of hundreds of policy documents.",
+    stat: "calls/day",
+    statLabel: "",
     icon: "🧠",
   },
   {
