@@ -90,7 +90,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-lg sm:text-xl md:text-2xl text-foreground/50 font-medium tracking-wide"
+            className="text-sm sm:text-base md:text-lg text-foreground/50 font-medium tracking-wide whitespace-nowrap"
           >
            [ currently building AI-Healthcare solutions representing NCI for Citi Upstart Program ]
           </motion.p>
