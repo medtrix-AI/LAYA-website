@@ -50,24 +50,25 @@ export default function Home() {
           </FloatingElement>
         </div>
 
+        {/* MedTrix AI logo — top left of page */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="absolute top-8 left-8 z-50 inline-flex items-center gap-4 bg-[var(--glass-strong)] backdrop-blur-sm rounded-3xl px-10 py-5 border border-black/5 shadow-lg"
+        >
+          <Activity className="w-8 h-8 text-[var(--accent-mint)]" />
+          <span className="text-2xl text-foreground/70">
+            <span className="font-semibold text-foreground/90">MedTrix</span> AI
+          </span>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center px-6 max-w-4xl"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="absolute top-8 left-8 z-50 inline-flex items-center gap-4 bg-[var(--glass-strong)] backdrop-blur-sm rounded-3xl px-10 py-5 border border-black/5 shadow-lg"
-          >
-            <Activity className="w-8 h-8 text-[var(--accent-mint)]" />
-            <span className="text-2xl text-foreground/70">
-              <span className="font-semibold text-foreground/90">MedTrix</span> AI
-            </span>
-          </motion.div>
-
           <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl mb-6"
             style={{ fontWeight: 500, letterSpacing: "-0.03em", lineHeight: 1.05 }}
@@ -245,55 +246,13 @@ export default function Home() {
         <div className="w-full bg-gradient-to-b from-[var(--background)] via-[var(--pastel-lavender)]/15 to-[var(--background)] py-16 md:py-22">
           <div className="relative max-w-4xl mx-auto px-6">
             {/* Central glowing orb */}
-            <div className="flex justify-center mb-12">
-              <motion.div
-                initial={{ scale: 0, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                className="relative"
-              >
-                <div className="relative w-48 h-48 md:w-56 md:h-56">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--pastel-mint)] via-[var(--pastel-lavender)] to-[var(--pastel-sky)] rounded-full blur-2xl opacity-50 animate-pulse" />
-                  <div className="absolute inset-6 bg-gradient-to-br from-[var(--glass-strong)] to-[var(--glass-subtle)] backdrop-blur-xl rounded-full border border-[var(--glass)] shadow-2xl flex items-center justify-center">
-                    <Sparkles className="w-16 h-16 text-foreground/50" />
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Labels around — as a grid instead of absolute */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              {["Policies", "Business Rules", "Coverage Logic", "Decisions"].map((label, i) => (
-                <motion.div
-                  key={label}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + i * 0.1, duration: 0.5 }}
-                  className="bg-[var(--glass)] backdrop-blur-sm rounded-xl px-4 py-3 shadow-sm border border-[var(--pastel-lavender)]/40 text-center"
-                >
-                  <p className="text-foreground/70 text-sm font-medium">{label}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="text-center text-foreground/50 text-sm font-medium tracking-wide mb-10"
-            >
-              Built using combined knowledge
-            </motion.p>
-
+            {/* Heading first */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-center"
+              transition={{ duration: 0.8 }}
+              className="text-center mb-6"
             >
               <h2
                 className="text-4xl md:text-5xl mb-4"
@@ -305,6 +264,51 @@ export default function Home() {
                 The constitution of Laya.
               </p>
             </motion.div>
+
+            {/* Built upon text */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-center text-foreground/50 text-sm font-medium tracking-wide mb-10"
+            >
+              Built using combined knowledge
+            </motion.p>
+
+            {/* Central glowing orb */}
+            <div className="flex justify-center mb-10">
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
+                className="relative"
+              >
+                <div className="relative w-48 h-48 md:w-56 md:h-56">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--pastel-mint)] via-[var(--pastel-lavender)] to-[var(--pastel-sky)] rounded-full blur-2xl opacity-50 animate-pulse" />
+                  <div className="absolute inset-6 bg-gradient-to-br from-[var(--glass-strong)] to-[var(--glass-subtle)] backdrop-blur-xl rounded-full border border-[var(--glass)] shadow-2xl flex items-center justify-center">
+                    <Sparkles className="w-16 h-16 text-foreground/50" />
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Policy labels */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+              {["Policies", "Business Rules", "Coverage Logic", "Decisions"].map((label, i) => (
+                <motion.div
+                  key={label}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
+                  className="bg-[var(--glass)] backdrop-blur-sm rounded-xl px-4 py-3 shadow-sm border border-[var(--pastel-lavender)]/40 text-center"
+                >
+                  <p className="text-foreground/70 text-sm font-medium">{label}</p>
+                </motion.div>
+              ))}
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
