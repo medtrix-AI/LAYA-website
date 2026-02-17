@@ -60,19 +60,19 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="fixed top-8 left-8 z-50 inline-flex items-center gap-4 bg-[var(--glass-strong)] backdrop-blur-sm rounded-3xl px-10 py-5 border border-black/5 shadow-lg"
+            className="absolute top-8 left-8 z-50 inline-flex items-center gap-4 bg-[var(--glass-strong)] backdrop-blur-sm rounded-3xl px-10 py-5 border border-black/5 shadow-lg"
           >
             <Activity className="w-8 h-8 text-[var(--accent-mint)]" />
             <span className="text-2xl text-foreground/70">
-              <span className="font-semibold text-foreground/90">Medtrix</span> AI
+              <span className="font-semibold text-foreground/90">MedTrix</span> AI
             </span>
           </motion.div>
 
           <motion.h1
-            className="text-6xl sm:text-7xl md:text-8xl mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl mb-6"
             style={{ fontWeight: 500, letterSpacing: "-0.03em", lineHeight: 1.05 }}
           >
-            We are Medtrix.
+            We are MedTrix.
           </motion.h1>
 
           <motion.p
@@ -91,7 +91,7 @@ export default function Home() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-lg sm:text-xl md:text-2xl text-foreground/50 font-medium tracking-wide"
           >
-           currently building AI- Healthcare solutions representing NCI for Citi UpStarts
+           [ currently building AI-Healthcare solutions representing NCI for Citi Upstart Program ]
           </motion.p>
         </motion.div>
 
@@ -100,14 +100,14 @@ export default function Home() {
 
       {/* Section 2: Problem Context — colored background */}
       <ScrollSection>
-        <div className="w-full bg-gradient-to-b from-[var(--background)] via-[var(--pastel-mint)]/15 to-[var(--background)] py-20 md:py-28">
+        <div className="w-full bg-gradient-to-b from-[var(--background)] via-[var(--pastel-mint)]/15 to-[var(--background)] py-14 md:py-18">
           <div className="container max-w-6xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-14"
+              className="text-center mb-10"
             >
               <h2
                 className="text-4xl md:text-5xl mb-4"
@@ -205,7 +205,7 @@ export default function Home() {
 
       {/* Section 3: Performance Targets — compact strip */}
       <ScrollSection>
-        <div className="w-full bg-[var(--pastel-sky)]/10 py-14 md:py-20">
+        <div className="w-full bg-[var(--pastel-sky)]/10 py-10 md:py-14">
           <div className="container max-w-5xl mx-auto px-6">
             <motion.p
               initial={{ opacity: 0 }}
@@ -242,7 +242,7 @@ export default function Home() {
 
       {/* Section 4: Unified Knowledge Base — colored bg */}
       <ScrollSection className="relative">
-        <div className="w-full bg-gradient-to-b from-[var(--background)] via-[var(--pastel-lavender)]/15 to-[var(--background)] py-24 md:py-32">
+        <div className="w-full bg-gradient-to-b from-[var(--background)] via-[var(--pastel-lavender)]/15 to-[var(--background)] py-16 md:py-22">
           <div className="relative max-w-4xl mx-auto px-6">
             {/* Central glowing orb */}
             <div className="flex justify-center mb-12">
@@ -263,7 +263,7 @@ export default function Home() {
             </div>
 
             {/* Labels around — as a grid instead of absolute */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               {["Policies", "Business Rules", "Coverage Logic", "Decisions"].map((label, i) => (
                 <motion.div
                   key={label}
@@ -277,6 +277,16 @@ export default function Home() {
                 </motion.div>
               ))}
             </div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="text-center text-foreground/50 text-sm font-medium tracking-wide mb-10"
+            >
+              Built using combined knowledge
+            </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -301,12 +311,12 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className="mt-14"
+              className="mt-10"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="arch.png"
-                alt="Medtrix architecture — unified knowledge base powering three intelligent layers"
+                alt="MedTrix architecture — unified knowledge base powering three intelligent layers"
                 className="w-full rounded-[2rem] shadow-xl border border-black/5"
               />
             </motion.div>
@@ -316,14 +326,14 @@ export default function Home() {
 
       {/* Section 5: Three Intelligent Layers — strong colored bg */}
       <ScrollSection>
-        <div className="w-full bg-gradient-to-b from-[var(--pastel-peach)]/15 via-[var(--pastel-rose)]/10 to-[var(--background)] py-20 md:py-28">
+        <div className="w-full bg-gradient-to-b from-[var(--pastel-peach)]/15 via-[var(--pastel-rose)]/10 to-[var(--background)] py-14 md:py-18">
           <div className="container max-w-6xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-14"
+              className="text-center mb-10"
             >
               <h2
                 className="text-4xl md:text-5xl mb-4"
@@ -479,7 +489,7 @@ export default function Home() {
             </div>
           </motion.div>
           <p className="text-center text-foreground/40 text-sm">
-            Medtrix × Laya Healthcare — 2026
+            MedTrix × Laya Healthcare — 2026
           </p>
         </div>
       </footer>
